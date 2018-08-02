@@ -195,7 +195,7 @@ const CGFloat kTOPasscodeKeypadMaxHeight = 330.0f;
     BOOL variableSizePasscode = (type >= TOPasscodeTypeCustomNumeric);
 
     // Update the visibility of the options button
-    self.optionsButton.hidden = !(state == TOPasscodeSettingsViewStateEnterNewPasscode);
+    self.optionsButton.hidden = self.hidesOptionsButton || !(state == TOPasscodeSettingsViewStateEnterNewPasscode);
 
     // Clear the input view
     self.inputField.passcode = nil;
@@ -326,7 +326,7 @@ const CGFloat kTOPasscodeKeypadMaxHeight = 330.0f;
     self.containerView.frame = CGRectOffset(self.containerView.frame, self.view.frame.size.width * multiplier, 0.0f);
 
     // Update the options button alpha depending on transition state
-    self.optionsButton.hidden = NO;
+    self.optionsButton.hidden = self.hidesOptionsButton;
     self.optionsButton.alpha = (state == TOPasscodeSettingsViewStateEnterNewPasscode) ? 0.0f : 1.0f;
 
     // Perform an animation where the snapshot slides off, and the new container slides in

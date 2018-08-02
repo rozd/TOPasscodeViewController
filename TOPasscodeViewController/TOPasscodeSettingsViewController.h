@@ -88,6 +88,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** If set, the view controller will disable input until this date time has been reached */
 @property (nonatomic, strong, nullable) NSDate *disabledInputDate;
 
+/** Indicates if Passcode Options button will be hidden. (Default is NO) */
+@property (nonatomic, assign) BOOL hidesOptionsButton;
+
 /*
  Create a new instance with the desird light or dark style
 

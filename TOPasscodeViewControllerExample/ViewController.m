@@ -59,6 +59,7 @@
 {
     TOPasscodeSettingsViewController* settingsViewController = [[TOPasscodeSettingsViewController alloc] init];
     settingsViewController.requireCurrentPasscode = NO;
+    settingsViewController.hidesOptionsButton = YES;
     settingsViewController.passcodeType = TOPasscodeTypeFourDigits;
     [self presentViewController:settingsViewController animated:YES completion:nil];
 }
