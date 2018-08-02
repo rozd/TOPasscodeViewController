@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,19 +29,37 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-sV-QmU">
-                                <rect key="frame" x="124.33333333333331" y="391" width="127" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ms1-3m-bLH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Enter Passcode">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QvI-bV-cds"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r45-Gh-2cX">
+                                <rect key="frame" x="124.33333333333331" y="376" width="127" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-sV-QmU">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ms1-3m-bLH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Enter Passcode">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QvI-bV-cds"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW2-I3-OQO">
+                                        <rect key="frame" x="0.0" y="30" width="127" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="qTd-za-tsA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Set Passcode">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t99-nC-GT1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p19-WO-rkA">
                                 <rect key="frame" x="337" y="740" width="23" height="23"/>
                                 <constraints>
@@ -57,12 +75,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dg6-sV-QmU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1OX-UK-zd8"/>
+                            <constraint firstItem="r45-Gh-2cX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9dv-dQ-Zeu"/>
                             <constraint firstItem="p19-WO-rkA" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-15" id="Ban-jy-Tkm"/>
                             <constraint firstItem="m0A-pQ-iFA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="U02-sm-oP6"/>
+                            <constraint firstItem="r45-Gh-2cX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bhY-in-uJN"/>
                             <constraint firstAttribute="trailing" secondItem="p19-WO-rkA" secondAttribute="trailing" constant="15" id="c0j-5O-WOe"/>
                             <constraint firstItem="m0A-pQ-iFA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d7n-g2-iXd"/>
-                            <constraint firstItem="dg6-sV-QmU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dEU-zJ-7Zm"/>
                             <constraint firstItem="m0A-pQ-iFA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="hEW-Kw-g3r"/>
                             <constraint firstItem="m0A-pQ-iFA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hSV-mF-ZqH"/>
                         </constraints>

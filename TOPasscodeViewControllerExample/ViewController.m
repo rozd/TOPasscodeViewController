@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TOPasscodeViewController.h"
+#import "TOPasscodeSettingsViewController.h"
 #import "SettingsViewController.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 
@@ -52,6 +53,14 @@
     passcodeViewController.allowBiometricValidation = self.biometricsAvailable;
     passcodeViewController.biometryType = self.faceIDAvailable ? TOPasscodeBiometryTypeFaceID : TOPasscodeBiometryTypeTouchID;
     [self presentViewController:passcodeViewController animated:YES completion:nil];
+}
+
+- (IBAction)createButtonTapped:(id)sender
+{
+    TOPasscodeSettingsViewController* settingsViewController = [[TOPasscodeSettingsViewController alloc] init];
+    settingsViewController.requireCurrentPasscode = NO;
+    settingsViewController.passcodeType = TOPasscodeTypeFourDigits;
+    [self presentViewController:settingsViewController animated:YES completion:nil];
 }
 
 - (IBAction)settingsButtonTapped:(id)sender
